@@ -52,16 +52,16 @@
     	"event": "game_update",
     	"event_data": {
     		"player1": {                             // Player 1 is always the player
-    			"hp": integer,                         // being sent this event
-    			"name": string,
-    			"current_challenge": integer,
-    			"solved_test_cases": integer,
+    			"hp": "integer",                       // being sent this event
+    			"name": "string",
+    			"current_challenge": "integer",        // starts at 1
+    			"solved_test_cases": "integer",
     		},
     		"player2": {
-    			"hp": integer,
-    			"name": string,
-    			"current_challenge": integer,
-    			"solved_test_cases": integer,
+    			"hp": "integer",
+    			"name": "string",
+    			"current_challenge": "integer",
+    			"solved_test_cases": "integer",
     		},
     	}
     }
@@ -74,10 +74,8 @@
     	"event": "new_challenge",
     	"event_data": {
     		"challenge_info": {
-    			"title": string,
-    			"description": string,                 // HTML/Markdown			
-    			"sample_test_cases": [ string ]        // HTML/Markdown			
-    			"sample_expected_output": [ string ]   // HTML/Markdown		
+    			"title": "string",
+    			"description": "string",               // HTML/Markdown			
     		}
     	}
     }
@@ -89,7 +87,7 @@
     {
     	"event": "submit_code",
     	"event_data": {
-    		"code": string                           // Uncompressed or Compressed 
+    		"code": "string"                         // Uncompressed or Compressed 
     	}
     }
     ```
@@ -100,8 +98,19 @@
     {
     	"event": "execution_results",
     	"event_data": {
-    		"passed": integer,
-    		"totalTestCases": integer
+    		"passed": "integer",
+    		"totalTestCases": "integer"
+    	}
+    }
+    ```
+    
+- `SERVER` **Game Ended**
+    
+    ```json
+    {
+    	"event": "game_ended",
+    	"event_data": {
+    		"winner": "string"
     	}
     }
     ```
@@ -112,7 +121,7 @@
     {
     	"event": "error",
     	"event_data": {
-    		"error_msg": string
+    		"error_msg": "string"
     	}
     }
     ```
@@ -124,19 +133,19 @@
     
     ```json
     {
-    	"room_code": string,
-    	"room_status": string,                     // Waiting, In-game, Ended
+    	"room_code": "string",
+    	"room_status": "string",                   // Waiting, In-game, Ended
     	"players": {
     		"player_id": [
-    			integer,                               // Health
-    			integer,                               // Curent Challenge Index
-    			integer                                // Solved Test Cases
+    			"integer",                             // Health
+    			"integer",                             // Curent Challenge Index
+    			"integer"                              // Solved Test Cases
     		], 
     	},
-    	"player_names": { "player_id": string },
-    	"host_id": string,
-    	"start_time": integer,                     // Epoch time
-    	"end_time": integer,                       // Epoch time
+    	"player_names": { "player_id": "string"},
+    	"host_id": "string",
+    	"start_time": "integer",                   // Epoch time
+    	"end_time": "integer",                     // Epoch time
     	"challenge_ids": []                        // List of challenge indexes from the database
     }
     ```
@@ -150,14 +159,12 @@ Ignore this since we will use JSON for now
     
     ```json
     {
-    	"id": integer,
-    	"title": string,
-    	"description": string,
-    	"sample_test_cases": [ string ],           // HTML/Markdown			
-    	"sample_expected_outputs": [ string ],     // HTML/Markdown	
-    	"test_cases": [ string ],                  // HTML/Markdown			
-    	"expected_outputs": [ string ],            // HTML/Markdown	
-    	"compare_func": string,                    // e.g. "result == int(expected)"
-    	"signature": string 					   // for boilerplate generation
+    	"id": "integer",
+    	"title": "string",
+    	"description": "string",                   // HTML/Markdown		
+    	"test_cases": [ "string" ],                
+    	"expected_outputs": [ "string" ],           
+    	"compare_func": "string",                  // e.g. "result == int(expected)"
+    	"signature": "string"                      // for boilerplate generation
     }
     ```

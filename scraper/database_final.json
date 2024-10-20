@@ -4,7 +4,7 @@
             "id": 0,
             "title": "Two Sum",
             "description": "<p>Given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>\n\n<p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>\n\n<p>You can return the answer in any order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,7,11,15], target = 9\n<strong>Output:</strong> [0,1]\n<strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,4], target = 6\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3], target = 6\n<strong>Output:</strong> [0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><strong>Only one valid answer exists.</strong></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face=\"monospace\">&nbsp;</font>time complexity?",
-            "signature": "def twoSum(nums: List[int], target: int) -> List[int]:",
+            "signature": "def twoSum(self, nums: List[int], target: int) -> List[int]:",
             "test_cases": [
                 "twoSum([2, 7, 11, 15], 9)",
                 "twoSum([3, 2, 4], 6)",
@@ -35,7 +35,7 @@
             "id": 1,
             "title": "Palindrome Number",
             "description": "<p>Given an integer <code>x</code>, return <code>true</code><em> if </em><code>x</code><em> is a </em><span data-keyword=\"palindrome-integer\"><em><strong>palindrome</strong></em></span><em>, and </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 121\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 121 reads as 121 from left to right and from right to left.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -121\n<strong>Output:</strong> false\n<strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 10\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup>&nbsp;&lt;= x &lt;= 2<sup>31</sup>&nbsp;- 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without converting the integer to a string?",
-            "signature": "def isPalindrome(x: int) -> bool:",
+            "signature": "def isPalindrome(self, x: int) -> bool:",
             "test_cases": [
                 "isPalindrome(121)",
                 "isPalindrome(-121)",
@@ -66,7 +66,7 @@
             "id": 2,
             "title": "Longest Common Prefix",
             "description": "<p>Write a function to find the longest common prefix string amongst an array of strings.</p>\n\n<p>If there is no common prefix, return an empty string <code>&quot;&quot;</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]\n<strong>Output:</strong> &quot;fl&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]\n<strong>Output:</strong> &quot;&quot;\n<strong>Explanation:</strong> There is no common prefix among the input strings.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= strs.length &lt;= 200</code></li>\n\t<li><code>0 &lt;= strs[i].length &lt;= 200</code></li>\n\t<li><code>strs[i]</code> consists of only lowercase English letters.</li>\n</ul>\n",
-            "signature": "def longestCommonPrefix(strs: List[str]) -> str:",
+            "signature": "def longestCommonPrefix(self, strs: List[str]) -> str:",
             "test_cases": [
                 "longestCommonPrefix(['flower','flow','flight'])",
                 "longestCommonPrefix(['dog','racecar','car'])",
@@ -97,7 +97,7 @@
             "id": 3,
             "title": "Valid Parentheses",
             "description": "<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>\n\n<p>An input string is valid if:</p>\n\n<ol>\n\t<li>Open brackets must be closed by the same type of brackets.</li>\n\t<li>Open brackets must be closed in the correct order.</li>\n\t<li>Every close bracket has a corresponding open bracket of the same type.</li>\n</ol>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()[]{}&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;(]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([])&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>\n</ul>\n",
-            "signature": "def isValid(s: str) -> bool:",
+            "signature": "def isValid(self, s: str) -> bool:",
             "test_cases": [
                 "isValid('()')",
                 "isValid('()[]{}')",
@@ -128,7 +128,7 @@
             "id": 4,
             "title": "Find the Index of the First Occurrence in a String",
             "description": "<p>Given two strings <code>needle</code> and <code>haystack</code>, return the index of the first occurrence of <code>needle</code> in <code>haystack</code>, or <code>-1</code> if <code>needle</code> is not part of <code>haystack</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> haystack = &quot;sadbutsad&quot;, needle = &quot;sad&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> &quot;sad&quot; occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> haystack = &quot;leetcode&quot;, needle = &quot;leeto&quot;\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> &quot;leeto&quot; did not occur in &quot;leetcode&quot;, so we return -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= haystack.length, needle.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>haystack</code> and <code>needle</code> consist of only lowercase English characters.</li>\n</ul>\n",
-            "signature": "def strStr(haystack: str, needle: str) -> int:",
+            "signature": "def strStr(self, haystack: str, needle: str) -> int:",
             "test_cases": [
                 "strStr('sadbutsad', 'sad')",
                 "strStr('leetcode', 'leeto')",
@@ -159,7 +159,7 @@
             "id": 5,
             "title": "Search Insert Position",
             "description": "<p>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>\n\n<p>You must&nbsp;write an algorithm with&nbsp;<code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 5\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 2\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 7\n<strong>Output:</strong> 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>nums</code> contains <strong>distinct</strong> values sorted in <strong>ascending</strong> order.</li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
-            "signature": "def searchInsert(nums: List[int], target: int) -> int:",
+            "signature": "def searchInsert(self, nums: List[int], target: int) -> int:",
             "test_cases": [
                 "searchInsert([1, 3, 5, 6], 5)",
                 "searchInsert([1, 3, 5, 6], 2)",
@@ -190,7 +190,7 @@
             "id": 6,
             "title": "Length of Last Word",
             "description": "<p>Given a string <code>s</code> consisting of words and spaces, return <em>the length of the <strong>last</strong> word in the string.</em></p>\n\n<p>A <strong>word</strong> is a maximal <span data-keyword=\"substring-nonempty\">substring</span> consisting of non-space characters only.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;Hello World&quot;\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The last word is &quot;World&quot; with length 5.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;   fly me   to   the moon  &quot;\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The last word is &quot;moon&quot; with length 4.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;luffy is still joyboy&quot;\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The last word is &quot;joyboy&quot; with length 6.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of only English letters and spaces <code>&#39; &#39;</code>.</li>\n\t<li>There will be at least one word in <code>s</code>.</li>\n</ul>\n",
-            "signature": "def lengthOfLastWord(s: str) -> int:",
+            "signature": "def lengthOfLastWord(self, s: str) -> int:",
             "test_cases": [
                 "lengthOfLastWord('Hello World')",
                 "lengthOfLastWord('   fly me   to   the moon  ')",
@@ -221,7 +221,7 @@
             "id": 7,
             "title": "Plus One",
             "description": "<p>You are given a <strong>large integer</strong> represented as an integer array <code>digits</code>, where each <code>digits[i]</code> is the <code>i<sup>th</sup></code> digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading <code>0</code>&#39;s.</p>\n\n<p>Increment the large integer by one and return <em>the resulting array of digits</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [1,2,3]\n<strong>Output:</strong> [1,2,4]\n<strong>Explanation:</strong> The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [4,3,2,1]\n<strong>Output:</strong> [4,3,2,2]\n<strong>Explanation:</strong> The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [9]\n<strong>Output:</strong> [1,0]\n<strong>Explanation:</strong> The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= digits.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= digits[i] &lt;= 9</code></li>\n\t<li><code>digits</code> does not contain any leading <code>0</code>&#39;s.</li>\n</ul>\n",
-            "signature": "def plusOne(digits: List[int]) -> List[int]:",
+            "signature": "def plusOne(self, digits: List[int]) -> List[int]:",
             "test_cases": [
                 "plusOne([1, 2, 3])",
                 "plusOne([4, 3, 2, 1])",
@@ -252,7 +252,7 @@
             "id": 8,
             "title": "Add Binary",
             "description": "<p>Given two binary strings <code>a</code> and <code>b</code>, return <em>their sum as a binary string</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> a = \"11\", b = \"1\"\n<strong>Output:</strong> \"100\"\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> a = \"1010\", b = \"1011\"\n<strong>Output:</strong> \"10101\"\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= a.length, b.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>a</code> and <code>b</code> consist&nbsp;only of <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code> characters.</li>\n\t<li>Each string does not contain leading zeros except for the zero itself.</li>\n</ul>\n",
-            "signature": "def addBinary(a: str, b: str) -> str:",
+            "signature": "def addBinary(self, a: str, b: str) -> str:",
             "test_cases": [
                 "addBinary('11', '1')",
                 "addBinary('1010', '1011')",
@@ -283,7 +283,7 @@
             "id": 9,
             "title": "Climbing Stairs",
             "description": "<p>You are climbing a staircase. It takes <code>n</code> steps to reach the top.</p>\n\n<p>Each time you can either climb <code>1</code> or <code>2</code> steps. In how many distinct ways can you climb to the top?</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> There are two ways to climb to the top.\n1. 1 step + 1 step\n2. 2 steps\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> There are three ways to climb to the top.\n1. 1 step + 1 step + 1 step\n2. 1 step + 2 steps\n3. 2 steps + 1 step\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 45</code></li>\n</ul>\n",
-            "signature": "def climbStairs(n: int) -> int:",
+            "signature": "def climbStairs(self, n: int) -> int:",
             "test_cases": [
                 "climbStairs(1)",
                 "climbStairs(2)",
@@ -314,7 +314,7 @@
             "id": 10,
             "title": "Best Time to Buy and Sell Stock",
             "description": "<p>You are given an array <code>prices</code> where <code>prices[i]</code> is the price of a given stock on the <code>i<sup>th</sup></code> day.</p>\n\n<p>You want to maximize your profit by choosing a <strong>single day</strong> to buy one stock and choosing a <strong>different day in the future</strong> to sell that stock.</p>\n\n<p>Return <em>the maximum profit you can achieve from this transaction</em>. If you cannot achieve any profit, return <code>0</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> prices = [7,1,5,3,6,4]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.\nNote that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> prices = [7,6,4,3,1]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> In this case, no transactions are done and the max profit = 0.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= prices.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= prices[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
-            "signature": "def maxProfit(prices: List[int]) -> int:",
+            "signature": "def maxProfit(self, prices: List[int]) -> int:",
             "test_cases": [
                 "maxProfit([7,1,5,3,6,4])",
                 "maxProfit([7,6,4,3,1])",
@@ -345,7 +345,7 @@
             "id": 11,
             "title": "Valid Palindrome",
             "description": "<p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>\n\n<p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;A man, a plan, a canal: Panama&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;race a car&quot;\n<strong>Output:</strong> false\n<strong>Explanation:</strong> &quot;raceacar&quot; is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot; &quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> s is an empty string &quot;&quot; after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists only of printable ASCII characters.</li>\n</ul>\n",
-            "signature": "def isPalindrome(s: str) -> bool:",
+            "signature": "def isPalindrome(self, s: str) -> bool:",
             "test_cases": [
                 "isPalindrome('A man, a plan, a canal: Panama')",
                 "isPalindrome('race a car')",
@@ -376,7 +376,7 @@
             "id": 12,
             "title": "Excel Sheet Column Title",
             "description": "<p>Given an integer <code>columnNumber</code>, return <em>its corresponding column title as it appears in an Excel sheet</em>.</p>\n\n<p>For example:</p>\n\n<pre>\nA -&gt; 1\nB -&gt; 2\nC -&gt; 3\n...\nZ -&gt; 26\nAA -&gt; 27\nAB -&gt; 28 \n...\n</pre>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 1\n<strong>Output:</strong> &quot;A&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 28\n<strong>Output:</strong> &quot;AB&quot;\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnNumber = 701\n<strong>Output:</strong> &quot;ZY&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= columnNumber &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
-            "signature": "def convertToTitle(columnNumber: int) -> str:",
+            "signature": "def convertToTitle(self, columnNumber: int) -> str:",
             "test_cases": [
                 "convertToTitle(1)",
                 "convertToTitle(28)",
@@ -407,7 +407,7 @@
             "id": 13,
             "title": "Happy Number",
             "description": "<p>Write an algorithm to determine if a number <code>n</code> is happy.</p>\n\n<p>A <strong>happy number</strong> is a number defined by the following process:</p>\n\n<ul>\n\t<li>Starting with any positive integer, replace the number by the sum of the squares of its digits.</li>\n\t<li>Repeat the process until the number equals 1 (where it will stay), or it <strong>loops endlessly in a cycle</strong> which does not include 1.</li>\n\t<li>Those numbers for which this process <strong>ends in 1</strong> are happy.</li>\n</ul>\n\n<p>Return <code>true</code> <em>if</em> <code>n</code> <em>is a happy number, and</em> <code>false</code> <em>if not</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 19\n<strong>Output:</strong> true\n<strong>Explanation:</strong>\n1<sup>2</sup> + 9<sup>2</sup> = 82\n8<sup>2</sup> + 2<sup>2</sup> = 68\n6<sup>2</sup> + 8<sup>2</sup> = 100\n1<sup>2</sup> + 0<sup>2</sup> + 0<sup>2</sup> = 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
-            "signature": "def isHappy(n: int) -> bool:",
+            "signature": "def isHappy(self, n: int) -> bool:",
             "test_cases": [
                 "isHappy(19)",
                 "isHappy(2)",
@@ -438,7 +438,7 @@
             "id": 14,
             "title": "Isomorphic Strings",
             "description": "<p>Given two strings <code>s</code> and <code>t</code>, <em>determine if they are isomorphic</em>.</p>\n\n<p>Two strings <code>s</code> and <code>t</code> are isomorphic if the characters in <code>s</code> can be replaced to get <code>t</code>.</p>\n\n<p>All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;egg&quot;, t = &quot;add&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The strings <code>s</code> and <code>t</code> can be made identical by:</p>\n\n<ul>\n\t<li>Mapping <code>&#39;e&#39;</code> to <code>&#39;a&#39;</code>.</li>\n\t<li>Mapping <code>&#39;g&#39;</code> to <code>&#39;d&#39;</code>.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;foo&quot;, t = &quot;bar&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The strings <code>s</code> and <code>t</code> can not be made identical as <code>&#39;o&#39;</code> needs to be mapped to both <code>&#39;a&#39;</code> and <code>&#39;r&#39;</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;paper&quot;, t = &quot;title&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>t.length == s.length</code></li>\n\t<li><code>s</code> and <code>t</code> consist of any valid ascii character.</li>\n</ul>\n",
-            "signature": "def isIsomorphic(s: str, t: str) -> bool:",
+            "signature": "def isIsomorphic(self, s: str, t: str) -> bool:",
             "test_cases": [
                 "isIsomorphic(\"egg\", \"add\")",
                 "isIsomorphic(\"foo\", \"bar\")",
@@ -469,7 +469,7 @@
             "id": 15,
             "title": "Contains Duplicate II",
             "description": "<p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <code>true</code> <em>if there are two <strong>distinct indices</strong> </em><code>i</code><em> and </em><code>j</code><em> in the array such that </em><code>nums[i] == nums[j]</code><em> and </em><code>abs(i - j) &lt;= k</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,1], k = 3\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,0,1,1], k = 1\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,1,2,3], k = 2\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
-            "signature": "def containsNearbyDuplicate(nums: List[int], k: int) -> bool:",
+            "signature": "def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:",
             "test_cases": [
                 "containsNearbyDuplicate([1,2,3,1], 3)",
                 "containsNearbyDuplicate([1,0,1,1], 1)",
@@ -500,7 +500,7 @@
             "id": 16,
             "title": "Summary Ranges",
             "description": "<p>You are given a <strong>sorted unique</strong> integer array <code>nums</code>.</p>\n\n<p>A <strong>range</strong> <code>[a,b]</code> is the set of all integers from <code>a</code> to <code>b</code> (inclusive).</p>\n\n<p>Return <em>the <strong>smallest sorted</strong> list of ranges that <strong>cover all the numbers in the array exactly</strong></em>. That is, each element of <code>nums</code> is covered by exactly one of the ranges, and there is no integer <code>x</code> such that <code>x</code> is in one of the ranges but not in <code>nums</code>.</p>\n\n<p>Each range <code>[a,b]</code> in the list should be output as:</p>\n\n<ul>\n\t<li><code>&quot;a-&gt;b&quot;</code> if <code>a != b</code></li>\n\t<li><code>&quot;a&quot;</code> if <code>a == b</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,2,4,5,7]\n<strong>Output:</strong> [&quot;0-&gt;2&quot;,&quot;4-&gt;5&quot;,&quot;7&quot;]\n<strong>Explanation:</strong> The ranges are:\n[0,2] --&gt; &quot;0-&gt;2&quot;\n[4,5] --&gt; &quot;4-&gt;5&quot;\n[7,7] --&gt; &quot;7&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,2,3,4,6,8,9]\n<strong>Output:</strong> [&quot;0&quot;,&quot;2-&gt;4&quot;,&quot;6&quot;,&quot;8-&gt;9&quot;]\n<strong>Explanation:</strong> The ranges are:\n[0,0] --&gt; &quot;0&quot;\n[2,4] --&gt; &quot;2-&gt;4&quot;\n[6,6] --&gt; &quot;6&quot;\n[8,9] --&gt; &quot;8-&gt;9&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= nums.length &lt;= 20</code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li>All the values of <code>nums</code> are <strong>unique</strong>.</li>\n\t<li><code>nums</code> is sorted in ascending order.</li>\n</ul>\n",
-            "signature": "def summaryRanges(nums: List[int]) -> List[str]:",
+            "signature": "def summaryRanges(self, nums: List[int]) -> List[str]:",
             "test_cases": [
                 "summaryRanges([])",
                 "summaryRanges([1])",
@@ -531,7 +531,7 @@
             "id": 17,
             "title": "Power of Two",
             "description": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of two. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of two, if there exists an integer <code>x</code> such that <code>n == 2<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n<strong>Explanation: </strong>2<sup>0</sup> = 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 16\n<strong>Output:</strong> true\n<strong>Explanation: </strong>2<sup>4</sup> = 16\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?",
-            "signature": "def isPowerOfTwo(n: int) -> bool:",
+            "signature": "def isPowerOfTwo(self, n: int) -> bool:",
             "test_cases": [
                 "isPowerOfTwo(1)",
                 "isPowerOfTwo(16)",
@@ -562,7 +562,7 @@
             "id": 18,
             "title": "Ugly Number",
             "description": "<p>An <strong>ugly number</strong> is a positive integer whose prime factors are limited to <code>2</code>, <code>3</code>, and <code>5</code>.</p>\n\n<p>Given an integer <code>n</code>, return <code>true</code> <em>if</em> <code>n</code> <em>is an <strong>ugly number</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 6\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 6 = 2 &times; 3\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 1 has no prime factors, therefore all of its prime factors are limited to 2, 3, and 5.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 14\n<strong>Output:</strong> false\n<strong>Explanation:</strong> 14 is not ugly since it includes the prime factor 7.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
-            "signature": "def isUgly(n: int) -> bool:",
+            "signature": "def isUgly(self, n: int) -> bool:",
             "test_cases": [
                 "isUgly(1)",
                 "isUgly(2)",
@@ -593,7 +593,7 @@
             "id": 19,
             "title": "Word Pattern",
             "description": "<p>Given a <code>pattern</code> and a string <code>s</code>, find if <code>s</code>&nbsp;follows the same pattern.</p>\n\n<p>Here <b>follow</b> means a full match, such that there is a bijection between a letter in <code>pattern</code> and a <b>non-empty</b> word in <code>s</code>. Specifically:</p>\n\n<ul>\n\t<li>Each letter in <code>pattern</code> maps to <strong>exactly</strong> one unique word in <code>s</code>.</li>\n\t<li>Each unique word in <code>s</code> maps to <strong>exactly</strong> one letter in <code>pattern</code>.</li>\n\t<li>No two letters map to the same word, and no two words map to the same letter.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;abba&quot;, s = &quot;dog cat cat dog&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The bijection can be established as:</p>\n\n<ul>\n\t<li><code>&#39;a&#39;</code> maps to <code>&quot;dog&quot;</code>.</li>\n\t<li><code>&#39;b&#39;</code> maps to <code>&quot;cat&quot;</code>.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;abba&quot;, s = &quot;dog cat cat fish&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;aaaa&quot;, s = &quot;dog cat cat dog&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= pattern.length &lt;= 300</code></li>\n\t<li><code>pattern</code> contains only lower-case English letters.</li>\n\t<li><code>1 &lt;= s.length &lt;= 3000</code></li>\n\t<li><code>s</code> contains only lowercase English letters and spaces <code>&#39; &#39;</code>.</li>\n\t<li><code>s</code> <strong>does not contain</strong> any leading or trailing spaces.</li>\n\t<li>All the words in <code>s</code> are separated by a <strong>single space</strong>.</li>\n</ul>\n",
-            "signature": "def wordPattern(pattern: str, s: str) -> bool:",
+            "signature": "def wordPattern(self, pattern: str, s: str) -> bool:",
             "test_cases": [
                 "wordPattern('abba', 'dog cat cat dog')",
                 "wordPattern('abba', 'dog cat cat fish')",
@@ -624,7 +624,7 @@
             "id": 20,
             "title": "Nim Game",
             "description": "<p>You are playing the following Nim Game with your friend:</p>\n\n<ul>\n\t<li>Initially, there is a heap of stones on the table.</li>\n\t<li>You and your friend will alternate taking turns, and <strong>you go first</strong>.</li>\n\t<li>On each turn, the person whose turn it is will remove 1 to 3 stones from the heap.</li>\n\t<li>The one who removes the last stone is the winner.</li>\n</ul>\n\n<p>Given <code>n</code>, the number of stones in the heap, return <code>true</code><em> if you can win the game assuming both you and your friend play optimally, otherwise return </em><code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 4\n<strong>Output:</strong> false\n<strong>Explanation:</strong> These are the possible outcomes:\n1. You remove 1 stone. Your friend removes 3 stones, including the last stone. Your friend wins.\n2. You remove 2 stones. Your friend removes 2 stones, including the last stone. Your friend wins.\n3. You remove 3 stones. Your friend removes the last stone. Your friend wins.\nIn all outcomes, your friend wins.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> true\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
-            "signature": "def canWinNim(n: int) -> bool:",
+            "signature": "def canWinNim(self, n: int) -> bool:",
             "test_cases": [
                 "canWinNim(1)",
                 "canWinNim(4)",
@@ -655,7 +655,7 @@
             "id": 21,
             "title": "Power of Three",
             "description": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of three. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of three, if there exists an integer <code>x</code> such that <code>n == 3<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 27\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 27 = 3<sup>3</sup>\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 0\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no x where 3<sup>x</sup> = 0.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = -1\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no x where 3<sup>x</sup> = (-1).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?",
-            "signature": "def isPowerOfThree(n: int) -> bool:",
+            "signature": "def isPowerOfThree(self, n: int) -> bool:",
             "test_cases": [
                 "isPowerOfThree(27)",
                 "isPowerOfThree(0)",
@@ -686,7 +686,7 @@
             "id": 22,
             "title": "Power of Four",
             "description": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of four. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of four, if there exists an integer <code>x</code> such that <code>n == 4<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> n = 16\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> n = 5\n<strong>Output:</strong> false\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?",
-            "signature": "def isPowerOfFour(n: int) -> bool:",
+            "signature": "def isPowerOfFour(self, n: int) -> bool:",
             "test_cases": [
                 "isPowerOfFour(16)",
                 "isPowerOfFour(5)",
@@ -717,7 +717,7 @@
             "id": 23,
             "title": "Reverse Vowels of a String",
             "description": "<p>Given a string <code>s</code>, reverse only all the vowels in the string and return it.</p>\n\n<p>The vowels are <code>&#39;a&#39;</code>, <code>&#39;e&#39;</code>, <code>&#39;i&#39;</code>, <code>&#39;o&#39;</code>, and <code>&#39;u&#39;</code>, and they can appear in both lower and upper cases, more than once.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;IceCreAm&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;AceCreIm&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The vowels in <code>s</code> are <code>[&#39;I&#39;, &#39;e&#39;, &#39;e&#39;, &#39;A&#39;]</code>. On reversing the vowels, s becomes <code>&quot;AceCreIm&quot;</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;leetcode&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;leotcede&quot;</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 3 * 10<sup>5</sup></code></li>\n\t<li><code>s</code> consist of <strong>printable ASCII</strong> characters.</li>\n</ul>\n",
-            "signature": "def reverseVowels(s: str) -> str:",
+            "signature": "def reverseVowels(self, s: str) -> str:",
             "test_cases": [
                 "reverseVowels('IceCreAm')",
                 "reverseVowels('leetcode')",
@@ -748,7 +748,7 @@
             "id": 24,
             "title": "Intersection of Two Arrays II",
             "description": "<p>Given two integer arrays <code>nums1</code> and <code>nums2</code>, return <em>an array of their intersection</em>. Each element in the result must appear as many times as it shows in both arrays and you may return the result in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,2,2,1], nums2 = [2,2]\n<strong>Output:</strong> [2,2]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [4,9,5], nums2 = [9,4,9,8,4]\n<strong>Output:</strong> [4,9]\n<strong>Explanation:</strong> [9,4] is also accepted.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>\n\t<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 1000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>What if the given array is already sorted? How would you optimize your algorithm?</li>\n\t<li>What if <code>nums1</code>&#39;s size is small compared to <code>nums2</code>&#39;s size? Which algorithm is better?</li>\n\t<li>What if elements of <code>nums2</code> are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?</li>\n</ul>\n",
-            "signature": "def intersect(nums1: List[int], nums2: List[int]) -> List[int]:",
+            "signature": "def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:",
             "test_cases": [
                 "intersect([1,2,2,1], [2,2])",
                 "intersect([4,9,5], [9,4,9,8,4])",
@@ -779,7 +779,7 @@
             "id": 25,
             "title": "Valid Perfect Square",
             "description": "<p>Given a positive integer num, return <code>true</code> <em>if</em> <code>num</code> <em>is a perfect square or</em> <code>false</code> <em>otherwise</em>.</p>\n\n<p>A <strong>perfect square</strong> is an integer that is the square of an integer. In other words, it is the product of some integer with itself.</p>\n\n<p>You must not use any built-in library function, such as <code>sqrt</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 16\n<strong>Output:</strong> true\n<strong>Explanation:</strong> We return true because 4 * 4 = 16 and 4 is an integer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 14\n<strong>Output:</strong> false\n<strong>Explanation:</strong> We return false because 3.742 * 3.742 = 14 and 3.742 is not an integer.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
-            "signature": "def isPerfectSquare(num: int) -> bool:",
+            "signature": "def isPerfectSquare(self, num: int) -> bool:",
             "test_cases": [
                 "isPerfectSquare(1)",
                 "isPerfectSquare(2)",
@@ -810,7 +810,7 @@
             "id": 26,
             "title": "Find the Difference",
             "description": "<p>You are given two strings <code>s</code> and <code>t</code>.</p>\n\n<p>String <code>t</code> is generated by random shuffling string <code>s</code> and then add one more letter at a random position.</p>\n\n<p>Return the letter that was added to <code>t</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abcd&quot;, t = &quot;abcde&quot;\n<strong>Output:</strong> &quot;e&quot;\n<strong>Explanation:</strong> &#39;e&#39; is the letter that was added.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;&quot;, t = &quot;y&quot;\n<strong>Output:</strong> &quot;y&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>t.length == s.length + 1</code></li>\n\t<li><code>s</code> and <code>t</code> consist of lowercase English letters.</li>\n</ul>\n",
-            "signature": "def findTheDifference(s: str, t: str) -> str:",
+            "signature": "def findTheDifference(self, s: str, t: str) -> str:",
             "test_cases": [
                 "findTheDifference('abcd', 'abcde')",
                 "findTheDifference('', 'y')",
@@ -841,7 +841,7 @@
             "id": 27,
             "title": "Is Subsequence",
             "description": "<p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code><em> if </em><code>s</code><em> is a <strong>subsequence</strong> of </em><code>t</code><em>, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>A <strong>subsequence</strong> of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., <code>&quot;ace&quot;</code> is a subsequence of <code>&quot;<u>a</u>b<u>c</u>d<u>e</u>&quot;</code> while <code>&quot;aec&quot;</code> is not).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = \"abc\", t = \"ahbgdc\"\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = \"axc\", t = \"ahbgdc\"\n<strong>Output:</strong> false\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= s.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= t.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> and <code>t</code> consist only of lowercase English letters.</li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Suppose there are lots of incoming <code>s</code>, say <code>s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>k</sub></code> where <code>k &gt;= 10<sup>9</sup></code>, and you want to check one by one to see if <code>t</code> has its subsequence. In this scenario, how would you change your code?",
-            "signature": "def isSubsequence(s: str, t: str) -> bool:",
+            "signature": "def isSubsequence(self, s: str, t: str) -> bool:",
             "test_cases": [
                 "isSubsequence('', 'abc')",
                 "isSubsequence('abc', '')",
@@ -872,7 +872,7 @@
             "id": 28,
             "title": "Binary Watch",
             "description": "<p>A binary watch has 4 LEDs on the top to represent the hours (0-11), and 6 LEDs on the bottom to represent&nbsp;the minutes (0-59). Each LED represents a zero or one, with the least significant bit on the right.</p>\n\n<ul>\n\t<li>For example, the below binary watch reads <code>&quot;4:51&quot;</code>.</li>\n</ul>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/08/binarywatch.jpg\" style=\"width: 500px; height: 500px;\" /></p>\n\n<p>Given an integer <code>turnedOn</code> which represents the number of LEDs that are currently on (ignoring the PM), return <em>all possible times the watch could represent</em>. You may return the answer in <strong>any order</strong>.</p>\n\n<p>The hour must not contain a leading zero.</p>\n\n<ul>\n\t<li>For example, <code>&quot;01:00&quot;</code> is not valid. It should be <code>&quot;1:00&quot;</code>.</li>\n</ul>\n\n<p>The minute must&nbsp;consist of two digits and may contain a leading zero.</p>\n\n<ul>\n\t<li>For example, <code>&quot;10:2&quot;</code> is not valid. It should be <code>&quot;10:02&quot;</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> turnedOn = 1\n<strong>Output:</strong> [\"0:01\",\"0:02\",\"0:04\",\"0:08\",\"0:16\",\"0:32\",\"1:00\",\"2:00\",\"4:00\",\"8:00\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> turnedOn = 9\n<strong>Output:</strong> []\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= turnedOn &lt;= 10</code></li>\n</ul>\n",
-            "signature": "def readBinaryWatch(turnedOn: int) -> List[str]:",
+            "signature": "def readBinaryWatch(self, turnedOn: int) -> List[str]:",
             "test_cases": [
                 "readBinaryWatch(0)",
                 "readBinaryWatch(1)",
@@ -903,7 +903,7 @@
             "id": 29,
             "title": "Convert a Number to Hexadecimal",
             "description": "<p>Given a 32-bit integer <code>num</code>, return <em>a string representing its hexadecimal representation</em>. For negative integers, <a href=\"https://en.wikipedia.org/wiki/Two%27s_complement\" target=\"_blank\">two&rsquo;s complement</a> method is used.</p>\n\n<p>All the letters in the answer string should be lowercase characters, and there should not be any leading zeros in the answer except for the zero itself.</p>\n\n<p><strong>Note:&nbsp;</strong>You are not allowed to use any built-in library method to directly solve this problem.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> num = 26\n<strong>Output:</strong> \"1a\"\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> num = -1\n<strong>Output:</strong> \"ffffffff\"\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
-            "signature": "def toHex(num: int) -> str:",
+            "signature": "def toHex(self, num: int) -> str:",
             "test_cases": [
                 "toHex(0)",
                 "toHex(15)",
@@ -934,7 +934,7 @@
             "id": 30,
             "title": "Longest Palindrome",
             "description": "<p>Given a string <code>s</code> which consists of lowercase or uppercase letters, return the length of the <strong>longest <span data-keyword=\"palindrome-string\">palindrome</span></strong>&nbsp;that can be built with those letters.</p>\n\n<p>Letters are <strong>case sensitive</strong>, for example, <code>&quot;Aa&quot;</code> is not considered a palindrome.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abccccdd&quot;\n<strong>Output:</strong> 7\n<strong>Explanation:</strong> One longest palindrome that can be built is &quot;dccaccd&quot;, whose length is 7.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;a&quot;\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The longest palindrome that can be built is &quot;a&quot;, whose length is 1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 2000</code></li>\n\t<li><code>s</code> consists of lowercase <strong>and/or</strong> uppercase English&nbsp;letters only.</li>\n</ul>\n",
-            "signature": "def longestPalindrome(s: str) -> int:",
+            "signature": "def longestPalindrome(self, s: str) -> int:",
             "test_cases": [
                 "longestPalindrome('abccccdd')",
                 "longestPalindrome('a')",
@@ -965,7 +965,7 @@
             "id": 31,
             "title": "Add Strings",
             "description": "<p>Given two non-negative integers, <code>num1</code> and <code>num2</code> represented as string, return <em>the sum of</em> <code>num1</code> <em>and</em> <code>num2</code> <em>as a string</em>.</p>\n\n<p>You must solve the problem without using any built-in library for handling large integers (such as <code>BigInteger</code>). You must also not convert the inputs to integers directly.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num1 = &quot;11&quot;, num2 = &quot;123&quot;\n<strong>Output:</strong> &quot;134&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num1 = &quot;456&quot;, num2 = &quot;77&quot;\n<strong>Output:</strong> &quot;533&quot;\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> num1 = &quot;0&quot;, num2 = &quot;0&quot;\n<strong>Output:</strong> &quot;0&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= num1.length, num2.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>num1</code> and <code>num2</code> consist of only digits.</li>\n\t<li><code>num1</code> and <code>num2</code> don&#39;t have any leading zeros except for the zero itself.</li>\n</ul>\n",
-            "signature": "def addStrings(num1: str, num2: str) -> str:",
+            "signature": "def addStrings(self, num1: str, num2: str) -> str:",
             "test_cases": [
                 "addStrings(\"11\", \"123\")",
                 "addStrings(\"456\", \"77\")",
@@ -996,7 +996,7 @@
             "id": 32,
             "title": "Arranging Coins",
             "description": "<p>You have <code>n</code> coins and you want to build a staircase with these coins. The staircase consists of <code>k</code> rows where the <code>i<sup>th</sup></code> row has exactly <code>i</code> coins. The last row of the staircase <strong>may be</strong> incomplete.</p>\n\n<p>Given the integer <code>n</code>, return <em>the number of <strong>complete rows</strong> of the staircase you will build</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/09/arrangecoins1-grid.jpg\" style=\"width: 253px; height: 253px;\" />\n<pre>\n<strong>Input:</strong> n = 5\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> Because the 3<sup>rd</sup> row is incomplete, we return 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/09/arrangecoins2-grid.jpg\" style=\"width: 333px; height: 333px;\" />\n<pre>\n<strong>Input:</strong> n = 8\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> Because the 4<sup>th</sup> row is incomplete, we return 3.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
-            "signature": "def arrangeCoins(n: int) -> int:",
+            "signature": "def arrangeCoins(self, n: int) -> int:",
             "test_cases": [
                 "arrangeCoins(0)",
                 "arrangeCoins(1)",
@@ -1027,7 +1027,7 @@
             "id": 33,
             "title": "Assign Cookies",
             "description": "<p>Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie.</p>\n\n<p>Each child <code>i</code> has a greed factor <code>g[i]</code>, which is the minimum size of a cookie that the child will be content with; and each cookie <code>j</code> has a size <code>s[j]</code>. If <code>s[j] &gt;= g[i]</code>, we can assign the cookie <code>j</code> to the child <code>i</code>, and the child <code>i</code> will be content. Your goal is to maximize the number of your content children and output the maximum number.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> g = [1,2,3], s = [1,1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> You have 3 children and 2 cookies. The greed factors of 3 children are 1, 2, 3. \nAnd even though you have 2 cookies, since their size is both 1, you could only make the child whose greed factor is 1 content.\nYou need to output 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> g = [1,2], s = [1,2,3]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> You have 2 children and 3 cookies. The greed factors of 2 children are 1, 2. \nYou have 3 cookies and their sizes are big enough to gratify all of the children, \nYou need to output 2.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= g.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= s.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= g[i], s[j] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Note:</strong> This question is the same as <a href=\"https://leetcode.com/problems/maximum-matching-of-players-with-trainers/description/\" target=\"_blank\"> 2410: Maximum Matching of Players With Trainers.</a></p>\n",
-            "signature": "def findContentChildren(g: List[int], s: List[int]) -> int:",
+            "signature": "def findContentChildren(self, g: List[int], s: List[int]) -> int:",
             "test_cases": [
                 "findContentChildren([1, 2, 3], [1, 1])",
                 "findContentChildren([1, 2], [1, 2, 3])",
@@ -1058,7 +1058,7 @@
             "id": 34,
             "title": "Repeated Substring Pattern",
             "description": "<p>Given a string <code>s</code>, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abab&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> It is the substring &quot;ab&quot; twice.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aba&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abcabcabcabc&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> It is the substring &quot;abc&quot; four times or the substring &quot;abcabc&quot; twice.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n",
-            "signature": "def repeatedSubstringPattern(s: str) -> bool:",
+            "signature": "def repeatedSubstringPattern(self, s: str) -> bool:",
             "test_cases": [
                 "repeatedSubstringPattern('abab')",
                 "repeatedSubstringPattern('aba')",
@@ -1089,7 +1089,7 @@
             "id": 35,
             "title": "License Key Formatting",
             "description": "<p>You are given a license key represented as a string <code>s</code> that consists of only alphanumeric characters and dashes. The string is separated into <code>n + 1</code> groups by <code>n</code> dashes. You are also given an integer <code>k</code>.</p>\n\n<p>We want to reformat the string <code>s</code> such that each group contains exactly <code>k</code> characters, except for the first group, which could be shorter than <code>k</code> but still must contain at least one character. Furthermore, there must be a dash inserted between two groups, and you should convert all lowercase letters to uppercase.</p>\n\n<p>Return <em>the reformatted license key</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;5F3Z-2e-9-w&quot;, k = 4\n<strong>Output:</strong> &quot;5F3Z-2E9W&quot;\n<strong>Explanation:</strong> The string s has been split into two parts, each part has 4 characters.\nNote that the two extra dashes are not needed and can be removed.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;2-5g-3-J&quot;, k = 2\n<strong>Output:</strong> &quot;2-5G-3J&quot;\n<strong>Explanation:</strong> The string s has been split into three parts, each part has 2 characters except the first part as it could be shorter as mentioned above.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists of English letters, digits, and dashes <code>&#39;-&#39;</code>.</li>\n\t<li><code>1 &lt;= k &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
-            "signature": "def licenseKeyFormatting(s: str, k: int) -> str:",
+            "signature": "def licenseKeyFormatting(self, s: str, k: int) -> str:",
             "test_cases": [
                 "licenseKeyFormatting('5F3Z-2e-9-w', 4)",
                 "licenseKeyFormatting('2-5g-3-J', 2)",

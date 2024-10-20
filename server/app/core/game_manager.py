@@ -23,8 +23,8 @@ class GameManager:
         self.websocket_manager = websocket_manager
         self.docker_execution_service = docker_execution_service
         self.rooms: Dict[str, Dict] = {}
-        self.challenge_fetch_limit = 2
-        self.hp_per_test_case = 10
+        self.challenge_fetch_limit = 5
+        self.hp_per_test_case = 4
 
     def create_room(self, player_name: str) -> Dict[str, str]:
         """
@@ -133,12 +133,13 @@ class GameManager:
             if result["passed_tests"] == len(challenge["test_cases"]):
                 room["players"][player_id][1] += 1
                 room["players"][player_id][2] = 0  # Reset solved test cases for the new challenge
-                if room["players"][player_id][1] >= self.challenge_fetch_limit:
-                    await self._end_game(room_code, player_id)
-                else:
-                    await self._send_new_challenge(room_code, player_id)
 
-        await self._send_game_update(room_code)
+            await self._send_game_update(room_code)
+
+            if room["players"][opponent_id][0] <= 0 or room["players"][player_id][1] >= self.challenge_fetch_limit:
+                await self._end_game(room_code, player_id)
+            else:
+                await self._send_new_challenge(room_code, player_id)
 
     async def _send_game_update(self, room_code: str):
         """
@@ -192,9 +193,7 @@ class GameManager:
                 "event_data": {
                     "challenge_info": {
                         "title": challenge["title"],
-                        "description": challenge["description"],
-                        "sample_test_cases": challenge["sample_test_cases"],
-                        "sample_expected_output": challenge["sample_expected_outputs"]
+                        "description": challenge["description"]
                     }
                 }
             }

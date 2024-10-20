@@ -9,6 +9,7 @@ def main():
 
     df = ls.questions
 
+    # Print all categorySlugs
     fetchLimit = 50
 
     filtered = df[
@@ -16,6 +17,7 @@ def main():
         & (df['paidOnly'] == False)
         & (df['acceptanceRate'] < 60)
         & (df['acceptanceRate'] > 40)
+        & (df['categorySlug'] == 'algorithms')
     ][:fetchLimit]
 
     result = []
@@ -24,9 +26,9 @@ def main():
         question = leetscrape.GetQuestion(row['titleSlug']).scrape()
         signature = question.Code
 
-        # Ignore first line and outdent the code by 1 level
-        signature = "\n".join(signature.split("\n")[1:])
-        signature = "\n".join([line[4:] for line in signature.split("\n")])
+        # Remove class definition and outdent the code by 1 level if it's indented
+        signature = signature.replace("class Solution:", "")
+        signature = "\n".join([line[4:] if line.startswith("    ") else line for line in signature.split("\n")]).strip()
 
         questionObj = {
             "id": len(result),
@@ -40,14 +42,8 @@ def main():
 
         result.append(questionObj)
 
-    """
-    database.json
-    {
-        "CHALLENGES": result   
-    }
-    """
-    with open("raw_database.json", "w") as f:
-        json.dump({"CHALLENGES": result}, f, indent=4)
+        with open("database_raw.json", "w") as f:
+            json.dump({"CHALLENGES": result}, f, indent=4)
 
 
 if __name__ == '__main__':

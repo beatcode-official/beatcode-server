@@ -53,6 +53,10 @@ async def websocket_endpoint(websocket: WebSocket, room_code: str, player_id: st
         return
 
     await websocket_manager.connect(websocket, room_code, player_id)
+
+    # Send an update to all players in the room
+    await game_manager._send_game_update(room_code)
+
     try:
         while True:
             data = await websocket.receive_text()

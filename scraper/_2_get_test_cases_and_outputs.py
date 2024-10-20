@@ -25,15 +25,15 @@ def get_gpt4_response(prompt):
 
 
 def get_test_cases_and_outputs():
-    with open("raw_database.json") as f:
+    with open("database_raw.json") as f:
         data = json.load(f)
 
     with open("prompt.txt", "r") as f:
         prompt = f.read()
 
     existing = False
-    if os.path.exists("database.json"):
-        with open("database.json", "r") as f:
+    if os.path.exists("database_filled.json"):
+        with open("database_filled.json", "r") as f:
             cur_db = json.load(f)["CHALLENGES"]
         existing = True
 
@@ -41,7 +41,7 @@ def get_test_cases_and_outputs():
         "CHALLENGES": []
     }
 
-    for question in tqdm(data["CHALLENGES"][:1]):
+    for question in tqdm(data["CHALLENGES"]):
         time.sleep(2)  # idk, please dont rate limit me openai
 
         # if the question is already in the current database, add the one in the current database to the new database
@@ -69,7 +69,7 @@ def get_test_cases_and_outputs():
         })
 
         # write after every iteration to prevent data loss
-        with open("database.json", "w") as f:
+        with open("database_filled.json", "w") as f:
             json.dump(new_db, f, indent=4)
 
 

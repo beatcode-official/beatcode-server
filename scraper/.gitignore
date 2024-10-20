@@ -1,2 +1,3 @@
 .env
-raw_database.json
+database_raw.json
+database_filled.json
