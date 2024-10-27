@@ -151,7 +151,7 @@ class GameManager:
         room = self.rooms[room_code]
         player_ids = list(room["players"].keys())
         for i, player_id in enumerate(player_ids):
-            opponent_id = player_ids[1 - i]
+            opponent_id = player_ids[-i - 1]
             update = {
                 "event": "game_update",
                 "event_data": {
@@ -160,15 +160,16 @@ class GameManager:
                         "name": room["player_names"][player_id],
                         "current_challenge": room["players"][player_id][1] + 1,
                         "solved_test_cases": room["players"][player_id][2]
-                    },
-                    "player2": {
-                        "hp": room["players"][opponent_id][0],
-                        "name": room["player_names"][opponent_id],
-                        "current_challenge": room["players"][opponent_id][1] + 1,
-                        "solved_test_cases": room["players"][opponent_id][2]
                     }
                 }
             }
+            if len(player_ids) >= 2:
+                update["event_data"]["player2"] = {
+                    "hp": room["players"][opponent_id][0],
+                    "name": room["player_names"][opponent_id],
+                    "current_challenge": room["players"][opponent_id][1] + 1,
+                    "solved_test_cases": room["players"][opponent_id][2]
+                }
             await self.websocket_manager.send(room_code, player_id, json.dumps(update))
 
     async def _send_new_challenge(self, room_code: str, player_id: str = None):
