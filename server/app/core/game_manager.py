@@ -193,7 +193,8 @@ class GameManager:
                 "event_data": {
                     "challenge_info": {
                         "title": challenge["title"],
-                        "description": challenge["description"]
+                        "description": challenge["description"],
+                        "signature": challenge["signature"],
                     }
                 }
             }

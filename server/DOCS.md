@@ -75,7 +75,8 @@
     	"event_data": {
     		"challenge_info": {
     			"title": "string",
-    			"description": "string",               // HTML/Markdown			
+    			"description": "string",               // HTML/Markdown		
+				"signature": "string",	
     		}
     	}
     }
